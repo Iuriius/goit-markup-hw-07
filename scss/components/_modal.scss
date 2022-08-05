@@ -13,16 +13,16 @@
     transition-property: opacity, pointer-events, visibility;
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
-}
 
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
 
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%);
+        .modal {
+            transform: translate(-50%, -50%);
+        }
+    }
 }
 
 .modal {
@@ -44,7 +44,7 @@
     transition-timing-function: var(--cubic);
 }
 
-.modal-btn-close {
+.modal__btn--close {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -57,18 +57,18 @@
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
-}
 
-.modal-btn-close:hover,
-.modal-btn-close:focus {
-    fill: var(--accent-color);
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
+    }
 }
 
 .subscribe {
     margin-left: auto;
 }
 
-.subscribe-field {
+.subscribe__field {
     margin-right: 10px;
     width: 358px;
     height: 50px;
@@ -82,7 +82,7 @@
     background: var(--background-color-footer);
 }
 
-.subscribe-btn {
+.subscribe__btn {
     width: 200px;
     height: 50px;
     font-weight: 700;
@@ -103,11 +103,11 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
-}
 
-.subscribe-btn:hover,
-.subscribe-btn:focus {
-    background-color: var(--button-accent-color);
+    &:hover,
+    &:focus {
+        background-color: var(--button-accent-color);
+    }
 }
 
 input,
@@ -125,7 +125,7 @@ label {
     color: var(--secondary-color);
 }
 
-.modal-title {
+.modal__title {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -134,12 +134,12 @@ label {
     margin-bottom: 12px;
 }
 
-.modal-component {
+.modal__component {
     margin-bottom: 10px;
     position: relative;
 }
 
-.input-area {
+.input__area {
     margin-top: 4px;
     width: 100%;
     height: 40px;
@@ -152,19 +152,19 @@ label {
     transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
+
+    &:focus,
+    &:hover {
+        border: 1px solid var(--accent-color);
+        outline: none;
+
+        &~.modal-icon {
+            fill: var(--accent-color);
+        }
+    }
 }
 
-.input-area:focus,
-.input-area:hover {
-    border: 1px solid var(--accent-color);
-    outline: none;
-}
-
-.input-area:focus~.modal-icon {
-    fill: var(--accent-color);
-}
-
-.input-text {
+.input__text {
     width: 100%;
     height: 120px;
     padding-left: 15px;
@@ -179,14 +179,14 @@ label {
     transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
+
+    &:focus,
+    &:hover {
+        border: 1px solid var(--accent-color);
+    }
 }
 
-.input-text:focus,
-.input-text:hover {
-    border: 1px solid var(--accent-color);
-}
-
-.modal-icon {
+.modal__icon {
     position: absolute;
     top: 34px;
     left: 15px;
@@ -199,14 +199,14 @@ label {
     transition-timing-function: var(--cubic);
 }
 
-.modal-policy {
+.modal__policy {
     position: relative;
     margin-top: 20px;
     color: var(--secondary-color);
     text-align: center;
 }
 
-.modal-submit-btn {
+.modal__submit-btn {
     display: block;
     margin: 0 auto;
 
@@ -227,19 +227,19 @@ label {
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
+
+    &:hover,
+    &:focus {
+        background-color: var(--button-accent-color);
+    }
 }
 
-.modal-submit-btn:hover,
-.modal-submit-btn:focus {
-    background-color: var(--button-accent-color);
-}
-
-.policy-link {
+.policy__link {
     text-underline-offset: 3px;
     color: var(--accent-color);
 }
 
-.policy-line {
+.policy__line {
     font-size: 14px;
     line-height: 2;
     letter-spacing: 0.03em;
@@ -248,14 +248,14 @@ label {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
+
+    &:hover {
+        color: var(--accent-color);
+    }
 }
 
 .checkbox {
     opacity: 0;
-}
-
-.policy-line:hover {
-    color: var(--accent-color);
 }
 
 .unchecked,
@@ -274,6 +274,6 @@ label {
     transition-timing-function: var(--cubic);
 }
 
-.checkbox:checked~.checkbox-custom .checked {
+.checkbox:checked~.checkbox--custom .checked {
     opacity: 1;
 }

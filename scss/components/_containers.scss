@@ -4,36 +4,44 @@
     padding: 0 15px;
 }
 
-.container-benefits {
+.container__benefits {
     display: flex;
     gap: 30px;
 }
 
-.container-whatwedo {
+.container__whatwedo {
     display: flex;
     gap: 30px;
 }
 
-.container-our-team {
+.container__our-team {
     display: flex;
     gap: 30px;
     justify-content: center;
 }
 
-.container-buttons {
+.container__buttons {
     gap: 8px;
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
 
-.container-example-cards {
+.container__example-cards {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
-.container-example-card-descr {
+
+.container__example-card-descr {
     border: 1px solid #EEEEEE;
     border-top: none;
     padding: 20px 24px;
+}
+
+.container__clients {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
 }

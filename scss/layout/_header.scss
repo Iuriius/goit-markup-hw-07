@@ -1,18 +1,19 @@
 .header {
     border-bottom: solid 1px var(--color-grey);
 }
+
 .container-header {
     display: flex;
     align-items: center;
 }
 
-.container-header-nav {
+.container-header__nav {
     display: flex;
     align-items: center;
     gap: 50px;
 }
 
-.container-header-contacts {
+.container-header__contacts {
     display: flex;
     gap: 50px;
     margin-left: auto;

@@ -12,13 +12,14 @@
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
-.nav:hover,
-.nav:focus {
-    color: var(--accent-color);
-}
-.contacts-mail {
+.contacts__mail {
     display: flex;
     align-items: center;
     font-weight: 500;
@@ -33,14 +34,13 @@
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
 
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
-.contacts-mail:hover,
-.contacts-mail:focus {
-    color: var(--accent-color);
-}
-
-.contacts-phone {
+.contacts__phone {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -55,19 +55,18 @@
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
 
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
-.contacts-phone:hover,
-.contacts-phone:focus {
-    color: var(--accent-color);
-}
-
-.contacts-mail-icon {
+.contacts-mail__icon {
     margin-right: 10px;
     fill: currentColor;
 }
 
-.contacts-phone-icon {
+.contacts-phone__icon {
     margin-right: 10px;
     fill: currentColor;
 }
@@ -86,16 +85,16 @@
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
     transition-delay: 0;
-}
 
-.active-page::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 4px;
-    border: var(--accent-color);
-    border-radius: 2px;
-    background-color: var(--accent-color);
-    position: relative;
-    top: 28px;
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        border: var(--accent-color);
+        border-radius: 2px;
+        background-color: var(--accent-color);
+        position: relative;
+        top: 28px;
+    }
 }
