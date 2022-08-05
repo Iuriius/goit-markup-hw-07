@@ -1,0 +1,26 @@
+.socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    gap: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--social-links-grey);
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic);
+}
+
+.social-links:hover,
+.social-links:focus {
+    color: var(--tertiary-color);
+    background-color: var(--accent-color);
+}

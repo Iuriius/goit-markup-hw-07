@@ -1,0 +1,101 @@
+.nav {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-color);
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic);
+}
+
+.nav:hover,
+.nav:focus {
+    color: var(--accent-color);
+}
+.contacts-mail {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 32px 0;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic);
+
+}
+
+.contacts-mail:hover,
+.contacts-mail:focus {
+    color: var(--accent-color);
+}
+
+.contacts-phone {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic);
+
+}
+
+.contacts-phone:hover,
+.contacts-phone:focus {
+    color: var(--accent-color);
+}
+
+.contacts-mail-icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.contacts-phone-icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.active-page {
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+    padding: 32px 0;
+    position: relative;
+    bottom: -2px;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic);
+    transition-delay: 0;
+}
+
+.active-page::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border: var(--accent-color);
+    border-radius: 2px;
+    background-color: var(--accent-color);
+    position: relative;
+    top: 28px;
+}
